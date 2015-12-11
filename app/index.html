@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="racebyraceApp">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title data-ng-bind="'AngularJS | ' + $state.current.data.pageTitle">AngularJS</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!--[if lt IE 9]>
+	    <script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+
+	<!-- ================== BEGIN BASE ANGULAR JS ================== -->
+    <script src="assets/plugins/angularjs/angular.min.js"></script>
+    <script src="assets/plugins/angularjs/angular-ui-route.min.js"></script>
+    <script src="assets/plugins/bootstrap-angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/plugins/angularjs/ocLazyLoad.min.js"></script>
+	<!-- ================== END BASE ANGULAR JS ================== -->
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body class="pace-top" >
+      <!--ng-class="{'pace-top': setting.layout.paceTop, 'boxed-layout': setting.layout.pageBoxedLayout, 'bg-white': setting.layout.pageBgWhite }"-->
+
+
+
+<!-- begin #header -->
+<div ng-include src="'template/header.html'"></div>
+<!-- end #header -->
+
+<div >
+   <!--begin #top-menu -->
+  <div ng-include src="'template/top-menu.html'"></div>
+   <!--end #top-menu -->
+</div>
+
+<!--<div >-->
+  <!--&lt;!&ndash; begin #sidebar &ndash;&gt;-->
+  <!--<div ng-include src="'template/sidebar.html'"></div>-->
+  <!--&lt;!&ndash; end #sidebar &ndash;&gt;-->
+<!--</div>-->
+
+<!-- begin #content -->
+<div id="content" view-content class="content-full-width" style="padding: 10px;" >
+  <div ng-view style="margin-top: 110px;"></div>
+
+</div>
+<!-- end #content -->
+
+<div ng-if="setting.layout.pageWithFooter === true">
+  <!-- begin #footer -->
+  <div id="footer" class="footer">
+    &copy; 2014 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
+  </div>
+  <!-- end #footer -->
+</div>
+
+<div ng-if="setting.layout.pageTwoSidebar === true">
+  <!-- begin #sidebar-right -->
+  <div ng-include src="'template/sidebar-right.html'"></div>
+  <!-- end #sidebar-right -->
+</div>
+
+<!-- begin #theme-panel -->
+<div ng-include src="'template/theme-panel.html'"></div>
+<!-- end #theme-panel -->
+
+<!-- begin scroll to top btn -->
+
+<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+	<![endif]-->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <!--<script src="assets/js/angular-app.js"></script>-->
+    <!--<script src="assets/js/angular-setting.js"></script>-->
+    <!--<script src="assets/js/angular-controller.js"></script>-->
+    <!--<script src="assets/js/angular-directive.js"></script>-->
+    <!--<script src="assets/js/apps.min.js"></script>-->
+	<!-- ================== END PAGE LEVEL JS ================== -->
+  <!--<script src="scripts/controllers/dashboard.js"></script>-->
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/dashboard.js"></script>
+  <script src="scripts/controllers/adduser.js"></script>
+  <script src="scripts/controllers/addprivilege.js"></script>
+  <script src="scripts/controllers/updateblockuser.js"></script>
+  <script src="scripts/controllers/checkworkhistory.js"></script>
+  <script src="scripts/controllers/addcenter.js"></script>
+  <script src="scripts/controllers/checkreport.js"></script>
+  <script src="scripts/controllers/loanrequest.js"></script>
+  <script src="scripts/controllers/loanapproval.js"></script>
+  <script src="scripts/controllers/checkincomeoutcome.js"></script>
+  <script src="scripts/controllers/addcompanyexp.js"></script>
+  <script src="scripts/controllers/checkloansummary.js"></script>
+  <script src="scripts/controllers/addindividual.js"></script>
+  <script src="scripts/controllers/addchits.js"></script>
+  <script src="scripts/controllers/checkownworkhistory.js"></script>
+  <script src="scripts/controllers/checkloanpaymenthistory.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
